@@ -1,0 +1,17 @@
+
+<h1>결과!</h1>
+
+<a href="{%url 'home' %}">다시세기!</a>다시 세기!
+
+<h2>당신이 입력한 문장의 길이는 총 {{total}}입니다!</h2>
+
+<h2>당신이 입력한 문장</h2>
+{{text}}
+<br>
+{{dictionary}}
+
+{% for word,count in dictionary%}
+
+{{word}}:{{count}}
+<br>
+{% endfor%}
