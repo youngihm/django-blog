@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wordcount',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_DIRS = [os.path.join(BASE_DIR, 'blog','static')]#static파일 있는 경로
+STATIC_ROOT = os.path.join(BASE_DIR,'static') #static파일을 한 곳에 모아 줄 위치
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/' #media 파일 요청받은 url주소
+
+
